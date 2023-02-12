@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -1 | sed 's/^\./&\//' | sort -k1.2,1n -k1.1,1d | sed ':a;N;$!ba;s/\n/, /g' | sed 's/.$//' && echo
